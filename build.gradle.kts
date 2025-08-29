@@ -20,8 +20,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-rest")
+    implementation("io.quarkus:quarkus-config-yaml")
     implementation("io.smallrye.config:smallrye-config-jasypt")
-    implementation("io.quarkiverse.config:quarkus-config-jasypt:2.4.0")
+    implementation("io.quarkus:quarkus-confluent-registry-avro")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }
