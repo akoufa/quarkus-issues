@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "2.2.10"
     kotlin("plugin.allopen") version "2.2.10"
+    id("org.jlleitschuh.gradle.ktlint") version "13.0.0"
     id("io.quarkus")
 }
 
@@ -14,11 +15,13 @@ val quarkusPlatformArtifactId: String by project
 val quarkusPlatformVersion: String by project
 
 dependencies {
-    implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
+    implementation(enforcedPlatform("$quarkusPlatformGroupId:$quarkusPlatformArtifactId:$quarkusPlatformVersion"))
     implementation("io.quarkus:quarkus-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-rest")
+    implementation("io.smallrye.config:smallrye-config-jasypt")
+    implementation("io.quarkiverse.config:quarkus-config-jasypt:2.4.0")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }
