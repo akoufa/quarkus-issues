@@ -1,0 +1,6 @@
+smallrye:
+  config:
+    secret-handler:
+      jasypt:
+        algorithm: PBEWITHHMACSHA512ANDAES_256
+        password: password
