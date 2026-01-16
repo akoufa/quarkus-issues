@@ -3,4 +3,14 @@ smallrye:
     secret-handler:
       jasypt:
         algorithm: PBEWITHHMACSHA512ANDAES_256
-        password: password
+        password: ${PASSWORD_ENV:password}
+
+mp:
+  messaging:
+    incoming:
+      notifications:
+        tracing-enabled: true
+        connector: smallrye-kafka
+        bootstrap:
+          servers: localhost:8082
+#         servers: ${jasypt::ENC(J2YJh6ixZcqdBk4tieK8UWUisUQtQbFhHyyxbFy32ULFEDy4lw01BTd7IDY/U0ZT)}
