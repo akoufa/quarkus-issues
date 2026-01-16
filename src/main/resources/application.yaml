@@ -12,5 +12,5 @@ mp:
         tracing-enabled: true
         connector: smallrye-kafka
         bootstrap:
-          servers: localhost:8082
-#         servers: ${jasypt::ENC(J2YJh6ixZcqdBk4tieK8UWUisUQtQbFhHyyxbFy32ULFEDy4lw01BTd7IDY/U0ZT)}
+#          servers: localhost:8082
+         servers: ${jasypt::ENC(J2YJh6ixZcqdBk4tieK8UWUisUQtQbFhHyyxbFy32ULFEDy4lw01BTd7IDY/U0ZT)}
